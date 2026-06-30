@@ -416,7 +416,11 @@ main {
     flex-direction: column;/* Stack sections vertically. */
     gap: 20px;            /* Add space between main sections. */
 }
-
+.content-cta.contact.hero p {
+    max-width: 100%;      /* Gives the text more room to breathe horizontally */
+    margin: 10px auto;   /* Centers the text block inside the brown banner */
+    line-height: 1.5;    /* Makes the paragraph readable */
+}
 .content-about,
 .content-cta {
     padding: 30px;        /* Add padding inside these content sections. */
@@ -493,18 +497,100 @@ main {
 .contact-page {
     display: flex;        /* Use flex layout to arrange contact form and info side by side. */
     flex-wrap: wrap;      /* Allow content to wrap on smaller screens. */
-    gap: 30px;            /* Add space between the two main sections. */
+    gap: 50px;            /* Add space between the two main sections. */
     padding: 30px;        /* Add padding inside the contact page section. */
     background-color: var(--mint-cream); /* Use a light background for the contact page. */
     border-radius: 18px;  /* Round the corners of the contact page section. */
     border: 3px solid var(--hunter-green); /* Add a green border around the contact page section. */
 }
 
+.socials-section {
+    background-color: rgba(245, 247, 242, 0.9);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.socials-section h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #4a3319;
+    font-family: inherit;
+    
+}
+
 .contact-socials {
     display: flex;        /* Use flex layout for social links. */
-    gap: 20px;            /* Add space between social icons. */
+    gap: 30px;            /* Add space between social icons. */
     justify-content: center; /* Center the social links horizontally. */
-    margin-top: 20px;     /* Add space above the social links. */
+    margin: 20px 0;     /* Add space above the social links. */
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-link-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.social-link-item img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.2 ease;
+
+}
+
+.social-link-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2b1d0c;
+    font-family: sans-serif;
+}
+
+.social-link-item:hover img {
+    transform: scale(1.1);
+}
+
+.social-link-item:hover span{
+    text-decoration: underline;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.contact-form textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+
+.contact-socials img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.2 ease;
+}
+
+.contact-socials a:hover img {
+    transform: scale(1.1);
 }
 
 .contact-hero{
@@ -516,8 +602,9 @@ main {
 }
 
 .contact-layout {
-    display: grid;        /* Use grid layout to arrange contact form and info side by side. */
-    grid-template-columns: minmax(250px, 320px) minmax(0, 1fr); /* Create two equal columns. */
+    display: grid;
+    align-items: stretch;   
+    grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);     /* Use grid layout to arrange contact form and info side by side. */
     gap: 20px;            /* Add space between the two main sections. */
 }
 
