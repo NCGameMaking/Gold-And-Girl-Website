@@ -594,18 +594,18 @@ main {
 }
 
 .contact-hero{
-    background-color: var(--deep-walnut); /* Use a dark background for the contact hero section. */
-    color: var(--mint-cream);             /* Make text light on the dark background. */
-    text-align: center;                   /* Center the content inside. */
-    padding: 30px;                        /* Add padding inside the hero section. */
-    border-radius: 18px;                  /* Round the corners of the hero section. */
+    background-color: var(--deep-walnut);
+        color: var(--mint-cream);
+    text-align: center;
+    padding: 30px;
+    border-radius: 18px;
 }
 
 .contact-layout {
     display: grid;
     align-items: stretch;   
-    grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);     /* Use grid layout to arrange contact form and info side by side. */
-    gap: 20px;            /* Add space between the two main sections. */
+    grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+        gap: 20px;
 }
 
 .contact-card {
@@ -613,10 +613,10 @@ main {
     border: 2px solid rgba(46, 90, 68, 0.18);    /* Soft border around the card. */
     border-radius: 24px;                      /* Round the corners of the card. */
     box-shadow: 0 18px 45px rgba(74, 53, 37, 0.08); /* Light shadow for depth. */
-    padding: 25px;                            /* Add space inside the card. */
-    display: flex;                            /* Use flex layout to arrange content inside the card. */
-    flex-direction: column;                   /* Stack child elements vertically. */
-    gap: 16px;                                /* Add space between child elements. */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .contact-details h3 {

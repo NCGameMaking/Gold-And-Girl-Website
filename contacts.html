@@ -6,7 +6,7 @@
     <title>Contact Gold and Girl</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body><!-- Titlee section/header -->
     <header class="main-header">
         <div class="header-title">
             <div class="logo-heading">
@@ -15,12 +15,13 @@
             </div>
             <p> Beekeeping with care for both bees, the environment and our local community.</p>
         </div>
+        <!-- Nav links -->
         <nav class ="header-links">
             <a href="index.html#about">About</a>
             <a href="index.html#mission">Mission</a>
             <a href="index.html#awareness">Awareness</a>
             <a href="index.html#products">Products</a>
-            <a href="contacts.html">Contact</a>
+            <a href="contacts.html">Contact</a><!-- New contact page (this page) -->
         </nav>
     </header>
 
@@ -34,75 +35,76 @@
 
         <section class="contact-layout">
             <div class="contact-card contact-details">
-                <h3>Get In Touch</h3>
+                <h3>Get In Touch</h3><!-- contact layout-->
                 <p>We love hearing from fellow local businesses, gardeners and community groups</p>
                 <ul>
                     <li><strong>Email:</strong> enquiries@goldandgirl.com.au</li>
-                    <li><strong>Phone:</strong> +61 456 789 012</li>
+                    <li><strong>Phone:</strong> +61 456 789 012</li><!--all fictional info-->
                     <li><strong>Location:</strong> Queensland, Australia</li>
                 </ul>
             </div>
 
-            <div class="contact-card">
+            <div class="contact-card"><!-- the website web3forms just told me to paste this in my .html file-->
                  <form id="enquiry-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        
-                    <input type="hidden" name="access_key" value="b2ed19f0-d632-40c3-b9b5-d496e8c6b7c5">
 
+                    <input type="hidden" name="access_key" value="b2ed19f0-d632-40c3-b9b5-d496e8c6b7c5">
+                        
                     <input type="hidden" name="redirect" value="">
 
                     <div class="form-row">
-                        <label for="name">Your Name</label>
-                        <input id="name" name="name" type="text" placeholder="John Smith" required>
+                        <label for="name">Your Name</label><!--website asking for name-->
+                        <input id="name" name="name" type="text" placeholder="John Smith" required><!-- Grey faint placeholder text in the textboxes-->
                     </div>
 
                     <div class="form-row">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address</label><!-- website asking for email -->
                         <input id="email" name="email" type="email" placeholder="you@example.com" required>
                     </div>
 
-                    <div class="form-row">
-                        <label for="topic">What do you want to ask about</label>
+                    <div class="form-row"><!-- topic selection -->
+                        <label for="topic">What do you want to ask about?</label>
                         <select id="topic" name="topic">
-                            <option value="honey">Honey Products</option>
+                            <option value="honey">Honey Products</option> <!--options-->
                             <option value="bees">Bee health and awareness</option>
                             <option value="order">Ordering or delivery</option>
                             <option value="other">Something else</option>
                         </select>
                     </div>
 
-                    <div class="form-row">
+                    <div class="form-row"><!-- A 5 row wide textbox for extra info -->
                         <label for="message">Your enquiry</label>
                         <textarea id="message" name="message" rows="5" placeholder="Tell us a little about your enquiry..." required></textarea>
                     </div>
 
-                        <button type="submit" class="btn">Send enquiry</button>
+                        <button type="submit" class="btn">Send enquiry</button><!-- Submit button -->
                     <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </section>
     </main>
-
+<!-- Submit button -->
     <section class="socials-section">
         <h3>Connect With Us</h3>
         <div class="contact-socials">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <a href="https://www.facebook.com" target="_blank" class="social-link-item"><!-- Clickable link-->
+
                 <img src="images/Facebook_logo.png" alt="Facebook Icon">
                 <span>@goldandgirl</span>
             </a>
 
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <a href="https://www.instagram.com" target="_blank" class="social-link-item"><!-- Clickable link-->
                 <img src="images/Instagram_logo.png" alt="instagram logo">
                 <span>@GoldNGirlHoney</span>
             </a>
 
-            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" class="social-link-item">
+            <a href="https://www.x.com" target="_blank" class="social-link-item"><!-- Clickable link-->
                 <img src="images/Twitter_logo.jpg" alt="X logo">
                 <span>@GoldandGirlHoney</span>
             </a>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="main-footer"><!-- footer-->
         <p>Copyright © 2026 Gold & Girl Honey Co. | Crafted with local care. </p>
     </footer>
 
@@ -111,35 +113,32 @@
         const messageBox = document.getElementById('form-message');
 
         form.addEventListener('submit', function (event) {
-            // Grab inputs
+            //inputs by the user
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // 1. Validation check
             if (!name || !email || !message) {
-                event.preventDefault(); // Stop form submission if empty
+                event.preventDefault();//stops emtpy forms from coming in
                 messageBox.textContent = 'Please complete your name, email and enquiry before sending.';
                 messageBox.className = 'form-message';
                 return;
             }
 
-            // 2. Show dynamic success text while it sends
             let topic = document.getElementById('topic').value;
-            let topicLabel = 'your enquiry';
-            
-            if (topic === 'honey'){
+            let topicLabel = 'enquiry';
+    
+            if (topic === 'honey'){//checks from line 67-70 to see if the topic was about honey
                 topicLabel = 'honey order or product question';
-            } else if (topic === 'bees') {
+            } else if (topic === 'bees') {//checks from line 67-70 to see if the topic was about bees
                 topicLabel = 'bee health and awareness question';
-            } else if (topic === 'order') {
+            } else if (topic === 'order') {//checks from line 67-70 to see if the topic was about ordering
                 topicLabel = 'ordering or delivery enquiry';
-            }
+            }//if it's in the "other" category, then it doesnt need a line of text, just goes back to the default enquiry text in line 129
 
             messageBox.textContent = `Thanks ${name}! Your ${topicLabel} has been received. We will reply to ${email} shortly.`;
             messageBox.className = 'form-message success';
             
-            // The form will now naturally send the data to Web3Forms and deliver it to your inbox!
         });
 
     </script>

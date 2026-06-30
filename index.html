@@ -1,121 +1,70 @@
-<!DOCTYPE html><!-- This is the very first line of the file. It tells the browser that the file is an HTML page. -->
-<html lang="en">
-<!-- The <html> tag wraps the whole webpage. lang="en" means the page is written in English. -->
+<!DOCTYPE html>
 <head>
-    <!-- The <head> section contains information about the page, not the visible content. -->
     <meta charset="UTF-8">
-    <!-- This line tells the browser what character set to use so letters and symbols appear correctly. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This makes the page scale nicely on phones and tablets by setting the width correctly. -->
     <title>Gold and Girl</title>
-    <!-- The page title shows in the browser tab and in bookmarks. -->
     <link rel="stylesheet" href="style.css">
-    <!-- This line links the page to the CSS file that controls how the page looks. -->
 </head>
 <body>
-    <!-- The <body> section contains everything that the visitor sees on the page. -->
-
-    <!-- Header Section -->
-    <!-- This is the top section of the page with the logo, name, and navigation menu. -->
-    <header class="main-header">
-        <!-- The header container groups the top content together. -->
+    <header class="main-header"><!--logo, title section top left-->
         <div class="header-title">
-            <!-- This block holds the logo and the title text. -->
             <div class="logo-heading">
-                <!-- This block is the row with the logo image and the brand name. -->
                 <img src="images/GoldNGirlLOGO.png" alt="Gold and Girl logo" class="logo">
-                <!-- The logo image. src points to the file, alt provides text if the image cannot load. -->
                 <h1>Gold and Girl</h1>
-                <!-- The main heading of the page, shown large at the top. -->
             </div>
             <p>Beekeeping with care for bees, flowers, the environment and our local community.</p>
-            <!-- A short sentence that describes what the business is about. -->
         </div>
+        <!--navigation link top right-->
         <nav class="header-links">
-            <!-- The navigation menu lets visitors jump to sections of the page. -->
             <a href="#about">About</a>
-            <!-- This link goes to the About section. -->
             <a href="#mission">Mission</a>
-            <!-- This link goes to the Mission section. -->
             <a href="#awareness">Awareness</a>
-            <!-- This link goes to the Awareness section. -->
             <a href="#products">Honey</a>
-            <!-- This link goes to the products section at the bottom. -->
             <a href="contacts.html">Contact</a>
-            <!-- This link opens the new contact page with the enquiry form. -->
+            <!--all pages will have the same top UI-->>
         </nav>
     </header>
-
-    <!-- Hero Section -->
-    <!-- The hero section is a featured area near the top with a big message and a call-to-action. -->
+        <!--hero section-->
     <section class="hero-section">
         <div>
-            <!-- This wrapper keeps the hero text centered and styled together. -->
-            <h2>Gold and Girl: Pure Honey, Healthy Hives and Community Awareness.</h2>
-            <!-- A strong heading that tells visitors what the site is about. -->
+]            <h2>Gold and Girl: Pure Honey, Healthy Hives and Community Awareness.</h2>
             <p>A Queensland beekeeper producing pure raw honey while raising awareness of Varroa mites, bee-friendly planting and healthy hive care.</p>
-            <!-- A paragraph that expands on the business mission in a friendly way. -->
             <a class="btn" href="#awareness">Learn how to help</a>
-            <!-- A button styled link that takes the visitor to the awareness section. -->
         </div>
     </section>
-
-    <!-- Video Section -->
-    <!-- This section includes a short real video showing bees in action. -->
     <section class="bee-flight-section">
         <div class="bee-flight-card">
-            <!-- This card groups the video with its text. -->
             <video class="product-video" autoplay loop muted playsinline>
-                <!-- The video element shows a moving picture. autoplay starts it automatically, loop repeats it, muted silences it, and playsinline keeps it inside the page. -->
-                <source src="images/EuropeanBeesOnFLOWER.mp4" type="video/mp4">
-                <!-- This line tells the browser where the video file is and what type it is. -->
+                <source src="images/EuropeanBeesOnFLOWER.mp4" type="video/mp4"><!--this line and the previous line exactly explain what this is does-->>
             </video>
             <div class="bee-flight-text">
-                <!-- This sidebar holds the text that explains the video. -->
                 <h2>Watch the bees at work</h2>
-                <!-- A heading for the video section. -->
                 <p>See local bees visiting flowers, collecting nectar, and helping our environment flourish. This real footage brings the hive-to-honey story to life.</p>
-                <!-- A sentence explaining why visitors should watch the video. -->
             </div>
         </div>
     </section>
-
-    <!-- Product Showcase -->
-    <!-- This section shows the products available for sale. -->
+    <!--where the business actually sells stuff-->
     <section id="products" class="product-showcase">
         <div class="product-grid">
-            <!-- The grid arranges the product cards nicely side by side. -->
-            <article class="product-item">
-                <!-- Each product item is one card with an image, title, description, and buttons. -->
+            <article class="product-item"><!--honey-->
                 <img src="images/JarOfHoney.jpg" alt="Jar of pure Queensland honey" class="product-item-img">
-                <!-- The image of the product. -->
                 <h3>Pure Queensland honey</h3>
-                <!-- The product title. -->
                 <p>Golden, thick and floral raw honey from a small local apiary. Bottled in glass and made with gentle care for bees and the environment.</p>
-                <!-- A short product description. -->
                 <ul>
-                    <!-- A list of product benefits or features. -->
                     <li>100% pure Australian raw honey</li>
                     <li>Small-batch, low-impact beekeeping</li>
                     <li>Glass jars, no plastics, no heat processing</li>
                 </ul>
-                <!-- A small note reminding you to swap in a real image later. -->
                 <div class="product-action">
-                    <!-- The action row contains the price and the buy button. -->
                     <span class="price">$18.00</span>
-                    <!-- The displayed price of this product. -->
                     <a class="btn" href="#">Buy now</a>
-                    <!-- A Buy button that can be wired up later to actually buy something. -->
                 </div>
             </article>
 
-            <article class="product-item">
+            <article class="product-item"><!--candle-->
                 <img src="images/BeeswaxCandle.jpg" alt="Honey wax candles" class="product-item-img">
-                <!-- The image for the candles product. -->
                 <h3>Beeswax candles</h3>
-                <!-- The product title for the candles. -->
                 <p>Beautiful beeswax candles made from local Beeswax. Natural, long-burning and perfect for creating a warm, welcoming home.</p>
-                <!-- The product description for the candles. -->
                 <ul>
                     <li>Available in 3 scents: lavender, vanilla, citrus</li>
                     <li>Hand-poured in small batches</li>
@@ -127,13 +76,10 @@
                 </div>
             </article>
 
-            <article class="product-item">
+            <article class="product-item"><!--wax wraps-->
                 <img src="images/HoneyWaxWraps.jpg" alt="Honey wax wraps" class="product-item-img">
-                <!-- The image for the wraps product. -->
                 <h3>Beeswax wraps</h3>
-                <!-- The product title for the wraps. -->
                 <p>Reusable food wraps made from beeswax and natural cloth. A sustainable alternative to plastic that fits the local, friendly brand.</p>
-                <!-- The product description for wraps. -->
                 <ul>
                     <li>Made from natural beeswax</li>
                     <li>Biodegradable and food-safe</li>
@@ -148,66 +94,43 @@
         </div>
     </section>
 
-    <!-- Main Content Area -->
-    <!-- This area contains longer text sections that tell the story of the business. -->
-    <main>
+    <main><!--explains how the business came  to be-->
         <section id="about" class="content-about">
-            <!-- The About section explains the business background. -->
             <div class="about-text">
                 <h2>About Gold and Girl</h2>
-                <!-- The heading for the About section. -->
                 <p>What began as a small hobby has grown into a family passion. Every hive is cared for with patience and respect for the bees, the environment, and the local community. We started keeping bees to be outside and learn from nature, and that slow, quiet work still fills the jars with care.</p>
-                <!-- A paragraph explaining the story behind the business. -->
                 <p>We use gentle, traditional methods passed down through generations, recipes, stories and hands-on know-how—so each jar carries a little of our family legacy and the local landscape it came from.</p>
-                <!-- A second paragraph giving more detail about the family tradition. -->
             </div>
             <img src="images/GoldAndGirlHoneyPic.jpg" alt="Gold and Girl Honey Jar" class="product-img">
-            <!-- An image next to the About text for visual interest. -->
         </section>
 
         <section id="mission" class="content-about">
-            <!-- The Mission section shares the goals of the business. -->
-            <div class="about-text">
+            <div class="about-text"><!--explains why they are doing this-->
                 <h2>Our mission</h2>
                 <p>We are focused on keeping bee populations strong so local plants, trees and flowers continue to be pollinated. Honey is a bonus: the main goal is healthy hives and a healthy planet.</p>
-                <!-- A paragraph about the business mission. -->
                 <p>As a beekeeper, I'm trying to do my part for the environment by producing lovely products while also teaching people about bee health and good hive care.</p>
-                <!-- A second paragraph explaining the values behind the work. -->
             </div>
             <img src="images/BeekeeperMission.jpg" alt="Bee hive and honey jar" class="product-img">
-            <!-- A supporting image for the mission section. -->
         </section>
 
         <section id="awareness" class="content-cta">
-            <!-- The Awareness section encourages visitors to help bees. -->
-            <div>
+            <div><!--raising awareness part-->
                 <h2>Community awareness</h2>
                 <p>Varroa mites are a growing threat in Queensland and can damage wild and weak European honey bee hives. This makes local action and awareness even more important.</p>
-                <!-- A paragraph about an important bee health issue. -->
                 <p>We encourage the community to plant more bee-friendly flora, support local honey, and help protect bees and the environment.</p>
-                <!-- A paragraph asking people to take action. -->
                 <a class="btn" href="contacts.html">Contact us today</a>
-                <!-- A button linking to the new contact page for enquiries. -->
             </div>
         </section>
     </main>
-
+                <!--all info from about, mission and awareness from the interview-->
     <footer class="main-footer">
-        <!-- The footer appears at the very bottom of the page. -->
         <p>Copyright © 2026 Gold & Girl Honey Co. | Crafted with local care.</p>
-        <!-- This text shows the copyright notice. -->
-    </footer>
+    </footer><!--footer-->
 
-    <script>
-        // The script below runs small interactive behavior on the page.
+    <script>//small scripts just checks when buton is pressed, will display 1 of those alerts saying purchased.
         document.querySelectorAll('.product-action .btn').forEach(function(btn) {
-            // Find every Buy button and attach the same action to each.
             btn.addEventListener('click', function(event) {
-                // When a button is clicked, run this code.
-                event.preventDefault();
-                // Stop the link from jumping or reloading the page.
                 alert('Bought! Thank you for supporting local bees.');
-                // Show a simple popup message to the visitor.
             });
         });
     </script>
