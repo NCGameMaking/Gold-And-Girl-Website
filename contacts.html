@@ -44,10 +44,15 @@
             </div>
 
             <div class="contact-card">
-                <form id="enquiry-form" class="contact-form">
+                 <form id="enquiry-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        
+                    <input type="hidden" name="access_key" value="b2ed19f0-d632-40c3-b9b5-d496e8c6b7c5">
+
+                    <input type="hidden" name="redirect" value="">
+
                     <div class="form-row">
                         <label for="name">Your Name</label>
-                        <input id="name" name="name" type="text" placeholder="John Smith" error-message="Please enter your name." required>
+                        <input id="name" name="name" type="text" placeholder="John Smith" required>
                     </div>
 
                     <div class="form-row">
@@ -70,7 +75,7 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tell us a little about your enquiry..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn">Send enquiry</button>
+                        <button type="submit" class="btn">Send enquiry</button>
                     <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
                 </form>
             </div>
@@ -106,21 +111,24 @@
         const messageBox = document.getElementById('form-message');
 
         form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
+            // Grab inputs
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
-            const topic = document.getElementById('topic').value;
             const message = document.getElementById('message').value.trim();
 
+            // 1. Validation check
             if (!name || !email || !message) {
+                event.preventDefault(); // Stop form submission if empty
                 messageBox.textContent = 'Please complete your name, email and enquiry before sending.';
                 messageBox.className = 'form-message';
-                return
+                return;
             }
 
+            // 2. Show dynamic success text while it sends
+            let topic = document.getElementById('topic').value;
             let topicLabel = 'your enquiry';
-            if (topic ==='honey'){
+            
+            if (topic === 'honey'){
                 topicLabel = 'honey order or product question';
             } else if (topic === 'bees') {
                 topicLabel = 'bee health and awareness question';
@@ -130,9 +138,10 @@
 
             messageBox.textContent = `Thanks ${name}! Your ${topicLabel} has been received. We will reply to ${email} shortly.`;
             messageBox.className = 'form-message success';
-            form.reset();
-
+            
+            // The form will now naturally send the data to Web3Forms and deliver it to your inbox!
         });
+
     </script>
 
 </body>
