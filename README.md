@@ -1,6 +1,8 @@
 Case Study: Making the Website for Gold and Girl Honey
 Location: Queensland, Australia
 
+
+
 Introduction
 This is the story of how I designed and built the website for "Gold and Girl," a local business in Queensland that sells raw, natural honey. The goal was to make a nice website for desktop computers. I wanted the site to look like a friendly, handmade local brand, but also teach people about protecting the environment. I did not want it to be just a boring shop. I wanted it to make people think about what is happening to bees in Queensland.
 
@@ -99,10 +101,14 @@ The Fix: I used a CSS tool called Flexbox (flex-direction: row). This forced the
 Trouble 3: Making the Email Form Actually Work
 A normal website form is just for looks and does not actually send messages anywhere. I wanted this one to work.
 
-The Fix: I connected the form to a free service called Web3Forms. I also wrote some JavaScript code. Now, when a user clicks submit, the code checks to make sure no boxes are left empty. Then, it changes the text on screen to say "Thanks for your message!" and instantly fires a real email notification straight to my personal inbox.
+The Fix: I connected the form to a free service called Web3Forms. I immensely struggled to write some JavaScript code that works, so I got AI to do it. Now, when a user clicks submit, the code checks to make sure no boxes are left empty. Then, it changes the text on screen to say "Thanks for your message!" and instantly sends a real email notification straight to my personal inbox.
 
 6. Testing the Site
 Did it pass?
-Australian English Test (Passed): I made sure to use Australian spelling throughout the site. For example, I used the word "Enquiry" because that is how it is spelled locally.
 
 Live Form Test (Passed): I tested the form myself. The dropdown menu successfully changes the success message on the screen, and the emails show up in my inbox just a few seconds after hitting submit.
+
+
+AI USAGE:
+
+I used AI to help me learn VS code, help me with some of the coding for the javascript with the live web forms as well as the annotations for the style.css (I did the /htmls by myself)
